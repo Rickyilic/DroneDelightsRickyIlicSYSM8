@@ -1,0 +1,29 @@
+.logo {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+}
+
+.navbar {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffa07a;
+  padding: 1rem 2rem;
+  display: flex;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
