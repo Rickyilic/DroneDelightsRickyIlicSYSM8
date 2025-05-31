@@ -32,6 +32,9 @@
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 400px;
   background-color: #fff7f2;
   border-radius: 12px;
@@ -48,8 +51,8 @@
 .product-card img {
   width: 100%;
   height: auto;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .product-card h3 {
@@ -61,4 +64,12 @@
   margin: 0;
   color: #444;
   font-weight: bold;
+}
+
+.card-content {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
 }

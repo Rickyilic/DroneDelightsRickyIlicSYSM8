@@ -28,8 +28,10 @@ function Home() {
             {popularMain.map(item => (
               <div key={item.id} className="product-card">
                 <img src={item.image} alt={item.name} />
-                <h3>{item.name}</h3>
-                <p>{item.price} kr</p>
+                <div className="card-content">
+                  <h3>{item.name}</h3>
+                  <p>{item.price} kr</p>
+                </div>
               </div>
             ))}
           </div>
@@ -44,8 +46,10 @@ function Home() {
             {popularDrinks.map(item => (
               <div key={item.id} className="product-card">
                 <img src={item.image} alt={item.name} />
-                <h3>{item.name}</h3>
-                <p>{item.price} kr</p>
+                <div className="card-content">
+                  <h3>{item.name}</h3>
+                  <p>{item.price} kr</p>
+                </div>
               </div>
             ))}
           </div>
@@ -60,8 +64,10 @@ function Home() {
             {popularDesserts.map(item => (
               <div key={item.id} className="product-card">
                 <img src={item.image} alt={item.name} />
-                <h3>{item.name}</h3>
-                <p>{item.price} kr</p>
+                <div className="card-content">
+                  <h3>{item.name}</h3>
+                  <p>{item.price} kr</p>
+                </div>
               </div>
             ))}
           </div>

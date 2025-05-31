@@ -27,3 +27,9 @@
   font-weight: bold;
   font-size: 30px;
 }
+
+.navbar-links a:hover {
+  color: #ffe5d0; /* 🟠 Orange text vid hover */
+  background-color: #a8590e; /* Ljus bakgrund för highlight */
+  border-radius: 4px;
+}
