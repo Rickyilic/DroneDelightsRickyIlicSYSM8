@@ -3,7 +3,7 @@ import { CartContext } from "../context/CartContext";
 import "./Cart.css";
 
 function Cart() {
-  const { cartItems, updateQuantity, removeFromCart } = useContext(CartContext);
+  const { cartItems, updateQuantity, removeFromCart, clearCart } = useContext(CartContext);
 
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -14,7 +14,7 @@ function Cart() {
       {cartItems.length === 0 ? (
         <p>Din varukorg är tom.</p>
       ) : (
-        <>
+        <div className="cart-content">
           <ul className="cart-list">
             {cartItems.map(item => (
               <li key={item.id} className="cart-item">
@@ -22,20 +22,25 @@ function Cart() {
                 <div className="cart-details">
                   <h3>{item.name}</h3>
                   <p>{item.price} kr</p>
-                  <input
-                    type="number"
-                    min="1"
-                    value={item.quantity}
-                    onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
-                  />
-                  <button onClick={() => removeFromCart(item.id)}>Ta bort</button>
+
+                  <div className="quantity-controls">
+                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)} disabled={item.quantity <= 1}>−</button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                  </div>
+                    <p>Totalt: {item.price * item.quantity} kr</p>
+
+                  <button className="remove-btn" onClick={() => removeFromCart(item.id)}>🗑️</button>
                 </div>
               </li>
             ))}
           </ul>
-
-          <h2>Totalt: {total} kr</h2>
-        </>
+        
+            <div className="cart-summary">
+                <h2>Totalt: {total} kr</h2>
+                <button className="clear-btn" onClick={clearCart}>Töm varukorgen</button>
+            </div>
+        </div>
       )}
     </div>
   );

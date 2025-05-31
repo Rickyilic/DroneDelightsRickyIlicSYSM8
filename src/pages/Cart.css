@@ -35,8 +35,30 @@
   color: #333;
 }
 
-.cart-details input {
-  width: 50px;
-  padding: 0.2rem;
-  margin: 0.5rem 0;
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-controls button {
+  padding: 0.3rem 0.6rem;
+  font-size: 1.2rem;
+  background-color: #ffa07a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.quantity-controls span {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.remove-btn {
+  margin-left: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
