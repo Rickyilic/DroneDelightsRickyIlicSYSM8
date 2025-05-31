@@ -1,0 +1,42 @@
+.cart {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: #fffaf5;
+}
+
+.cart h1 {
+  color: #cc5200;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: #fff7f2;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.cart-img {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.cart-details h3 {
+  margin: 0;
+  color: #333;
+}
+
+.cart-details input {
+  width: 50px;
+  padding: 0.2rem;
+  margin: 0.5rem 0;
+}
