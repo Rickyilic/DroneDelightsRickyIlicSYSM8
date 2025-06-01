@@ -4,8 +4,13 @@ import { useNavigate } from "react-router-dom";
 import "./Checkout.css";
 
 function Checkout() {
+
+
   const { cartItems, clearCart } = useContext(CartContext);
+  const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const navigate = useNavigate();
+  
+
 
   const [form, setForm] = useState({
     name: "",
@@ -35,6 +40,19 @@ function Checkout() {
       <h1>Betalning</h1>
 
       <form onSubmit={handleSubmit} className="checkout-form">
+        {cartItems.length > 0 && (
+        <div className="checkout-summary">
+            <h2>Din beställning:</h2>
+            <ul>
+            {cartItems.map(item => (
+                <li key={item.id}>
+                {item.name} × {item.quantity} – {item.price * item.quantity} kr
+                </li>
+            ))}
+            </ul>
+            <h3>Totalt att betala: {total} kr</h3>
+        </div>
+        )}
         <label>
           Namn:
           <input type="text" name="name" value={form.name} onChange={handleChange} required />

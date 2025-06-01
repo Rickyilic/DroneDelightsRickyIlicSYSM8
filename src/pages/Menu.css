@@ -9,7 +9,7 @@
 }
 
 .filter-buttons {
-  margin-bottom: 2rem;
+margin-bottom: 2rem;
   display: flex;
   gap: 1rem;
 }
@@ -23,7 +23,7 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
   transition: 0.2s;
 }
 
@@ -81,4 +81,6 @@
 .menu-card:hover {
   transform: scale(105%);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
 }
+

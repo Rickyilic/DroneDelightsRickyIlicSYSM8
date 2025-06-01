@@ -18,7 +18,7 @@ function Home() {
   return (
     <div className="home">
       <h1>Välkommen till Drone Delights!</h1>
-      <p>Mat på minuter! - För schysta priser! - Levererat hem till dig med drönare! 🚁</p>
+      <p>Mat på minuter! - För schysta priser! - Levererat hem till dig med drönare!</p>
 
       {/* Huvudrätter */}
       {popularMain.length > 0 && (
