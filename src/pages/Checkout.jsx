@@ -5,12 +5,9 @@ import "./Checkout.css";
 
 function Checkout() {
 
-
   const { cartItems, clearCart } = useContext(CartContext);
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const navigate = useNavigate();
-  
-
 
   const [form, setForm] = useState({
     name: "",

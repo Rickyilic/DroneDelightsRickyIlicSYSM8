@@ -17,12 +17,15 @@ function Home() {
 
   return (
     <div className="home">
-      <h1>Välkommen till Drone Delights!</h1>
-      <p>Mat på minuter! - För schysta priser! - Levererat hem till dig med drönare!</p>
+      <div className="hero-text">
+        <h1>Välkommen till <span>Drone Delights!</span></h1>
+        <p>Mat på minuter • Schysta priser • Levererat med drönare</p>
+      </div>
 
       {/* Huvudrätter */}
       {popularMain.length > 0 && (
         <>
+        <div className="product-section">
           <h2>Populära rätter</h2>
           <div className="popular-products">
             {popularMain.map(item => (
@@ -35,12 +38,14 @@ function Home() {
               </div>
             ))}
           </div>
+        </div>
         </>
       )}
 
       {/* Drycker */}
       {popularDrinks.length > 0 && (
         <>
+        <div className="product-section">
           <h2>Populära drycker</h2>
           <div className="popular-products">
             {popularDrinks.map(item => (
@@ -53,12 +58,14 @@ function Home() {
               </div>
             ))}
           </div>
+        </div>
         </>
       )}
 
       {/* Efterrätter */}
       {popularDesserts.length > 0 && (
         <>
+        <div className="product-section">
           <h2>Populära efterrätter</h2>
           <div className="popular-products">
             {popularDesserts.map(item => (
@@ -71,6 +78,7 @@ function Home() {
               </div>
             ))}
           </div>
+        </div>
         </>
       )}
     </div>
