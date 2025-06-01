@@ -131,9 +131,11 @@
   border-radius: 6px;
   font-weight: bold;
   text-align: center;
+  border: none;
   transition: background-color 0.2s ease;
 }
 
 .checkout-btn:hover {
   background-color: #ff8c1a;
+  cursor: pointer;
 }

@@ -5,12 +5,14 @@
 
 .menu h1 {
   color: #cc5200;
+  text-align: center;
   margin-bottom: 1rem;
 }
 
 .filter-buttons {
 margin-bottom: 2rem;
   display: flex;
+  justify-content: center;
   gap: 1rem;
 }
 

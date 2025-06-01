@@ -11,23 +11,13 @@
 }
 
 .logo {
-  width: 500px;
+  width: 400px;
 }
-
-.logo-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 
 .navbar {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background: rgba(255, 160, 122, 0.9);
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   display: flex;
   justify-content: center;
 }

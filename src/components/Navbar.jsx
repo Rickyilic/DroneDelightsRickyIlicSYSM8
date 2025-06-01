@@ -4,10 +4,11 @@ import logo from "../assets/Logo.png";
 
 function Navbar() {
   return (
+      <>
         <div className="navbar-logo">
-          <div className="logo-wrapper">
           <img src={logo} alt="Drone Delights logo" className="logo" />
-          </div>
+        </div>
+
           <nav className="navbar">
               <ul className="navbar-links">
                 <li><Link to="/">Hem</Link></li>
@@ -16,7 +17,7 @@ function Navbar() {
                 <li><Link to="/checkout">Betalning</Link></li>
               </ul>
           </nav>
-        </div>
+      </>
   );
 }
 
