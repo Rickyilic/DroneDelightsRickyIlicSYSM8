@@ -39,12 +39,6 @@
   border-radius: 8px;
 }
 
- /* .home h1 {
-  font-size: 2.5rem;
-  color: #cc5200;
-  margin-bottom: 0.5rem;
-} */
-
 .home h2 {
   background-color: #ffa07a;
   color: white;
@@ -118,4 +112,20 @@
   border-radius: 12px;
   margin: 0 auto;
   margin-bottom: 2rem;
+}
+
+.product-card button {
+  background-color: #ff8c42;
+  color: white;
+  border: none;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-size: 1.5rem; /* öka textstorlek */
+  padding: 0.5rem 1rem; /* öka padding för bättre klickbarhet */
+  font-weight: bold; /* gör texten tydligare */
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #cc5200;
 }

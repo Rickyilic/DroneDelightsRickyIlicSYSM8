@@ -64,7 +64,7 @@ function Menu() {
 
             <div className="card-content">
               <h3>{item.name}</h3>
-              <p>{item.price} kr</p>
+              <p className="product-price">{item.price} kr</p>
               <button className="add-btn" onClick={() => addToCart(item)}>Lägg till i varukorg</button>
             </div>
           </div>

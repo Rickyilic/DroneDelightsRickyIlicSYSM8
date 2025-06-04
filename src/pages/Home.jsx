@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import "./Home.css";
 
 function Home() {
   const [popular, setPopular] = useState([]);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     fetch("http://localhost:3001/products?popular=true")
@@ -34,6 +37,7 @@ function Home() {
                 <div className="card-content">
                   <h3>{item.name}</h3>
                   <p>{item.price} kr</p>
+                  <button onClick={() => addToCart(item)}>Lägg till i varukorg</button>
                 </div>
               </div>
             ))}
@@ -54,6 +58,7 @@ function Home() {
                 <div className="card-content">
                   <h3>{item.name}</h3>
                   <p>{item.price} kr</p>
+                  <button onClick={() => addToCart(item)}>Lägg till i varukorg</button>
                 </div>
               </div>
             ))}
@@ -74,6 +79,7 @@ function Home() {
                 <div className="card-content">
                   <h3>{item.name}</h3>
                   <p>{item.price} kr</p>
+                  <button onClick={() => addToCart(item)}>Lägg till i varukorg</button>
                 </div>
               </div>
             ))}
