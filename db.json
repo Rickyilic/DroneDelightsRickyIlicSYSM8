@@ -1,26 +1,219 @@
 {
   "products": [
-    { "id": 1, "name": "Citrus Burst", "category": "dryck", "price": 29, "image": "/images/citrus-burst.png", "popular": false},
-    { "id": 2, "name": "Minty Cucumber Cooler", "category": "dryck", "price": 35, "image": "/images/minty-cucumber.png", "popular": true},
-    { "id": 3, "name": "Ocean Breeze Soda", "category": "dryck", "price": 29, "image": "/images/ocean-breeze.png", "popular": false},
-    { "id": 4, "name": "Matcha Vanilla Latte", "category": "dryck", "price": 35, "image": "/images/matcha-vanilla-latte.png", "popular": true},
-    { "id": 5, "name": "Strawberry Spritz", "category": "dryck", "price": 35, "image": "/images/strawberry-spritz.png", "popular":true},
-    { "id": 6, "name": "Tropic Sparkle", "category": "dryck", "price": 29, "image": "/images/tropic-sparkle.png", "popular": false},
-    { "id": 7, "name": "Citrus Cooler", "category": "dryck", "price": 29, "image": "/images/citrus-cooler.png", "popular": false},
-    { "id": 8, "name": "Green Leaf Energy", "category": "dryck", "price": 35, "image": "/images/blue-energy.png", "popular": false},
-    { "id": 9, "name": "Frida Early Bird", "category": "dryck", "price": 35, "image": "/images/early-bird.png", "popular": false},
-    { "id": 10, "name": "Grilled Salmon", "category": "huvudrätt", "price": 99, "image": "/images/salmon.webp", "popular": false},
-    { "id": 11, "name": "Blackout Burger", "category": "huvudrätt", "price": 70, "image": "/images/blackout-burger.png", "popular": true},
-    { "id": 12, "name": "Double Cheese Stack", "category": "huvudrätt", "price": 79, "image": "/images/double-cheese.png", "popular": true},
-    { "id": 13, "name": "Truffle Melt Burger", "category": "huvudrätt", "price": 65, "image": "/images/truffle-burger.png", "popular": true},
-    { "id": 14, "name": "Triple Patty burger", "category": "huvudrätt", "price": 89, "image": "/images/triple-patty.png", "popular": false},
-    { "id": 15, "name": "Spaghetti Carbonara", "category": "huvudrätt", "price": 99, "image": "/images/carbonara.webp", "popular": false},
-    { "id": 16, "name": "Crispy Fries", "category": "huvudrätt", "price": 25, "image": "/images/fries.png", "popular": false},
-    { "id": 17, "name": "Sweet Fries", "category": "huvudrätt", "price": 30, "image": "/images/sweet-fries.png", "popular": false},
-    { "id": 18, "name": "Oreo Choco Shake", "category": "efterrätt", "price": 39, "image": "/images/oreo-shake.png", "popular": true},
-    { "id": 19, "name": "Salted Caramel Cheesecake", "category": "efterrätt", "price": 35, "image": "/images/salted-caramel-cheesecake.png", "popular": true },
-    { "id": 20, "name": "Chokladfondant", "category": "efterrätt", "price": 39, "image": "/images/choklad-fondant.jpg", "popular": true },
-    { "id": 21, "name": "Jordgubbspannacotta", "category": "efterrätt", "price": 39, "image": "/images/jordgubbs-pannacotta.jpg", "popular": false },
-    { "id": 22, "name": "Vaniljglass med bär", "category": "efterrätt", "price": 39, "image": "/images/vanilla-icecream.jpg", "popular": false}
+    {
+      "id": "1",
+      "name": "Citrus Burst",
+      "category": "dryck",
+      "price": 29,
+      "image": "/images/citrus-burst.png",
+      "popular": false
+    },
+    {
+      "id": "2",
+      "name": "Minty Cucumber Cooler",
+      "category": "dryck",
+      "price": 35,
+      "image": "/images/minty-cucumber.png",
+      "popular": true
+    },
+    {
+      "id": "3",
+      "name": "Ocean Breeze Soda",
+      "category": "dryck",
+      "price": 29,
+      "image": "/images/ocean-breeze.png",
+      "popular": false
+    },
+    {
+      "id": "4",
+      "name": "Matcha Vanilla Latte",
+      "category": "dryck",
+      "price": 35,
+      "image": "/images/matcha-vanilla-latte.png",
+      "popular": true
+    },
+    {
+      "id": "5",
+      "name": "Strawberry Spritz",
+      "category": "dryck",
+      "price": 35,
+      "image": "/images/strawberry-spritz.png",
+      "popular": true
+    },
+    {
+      "id": "6",
+      "name": "Tropic Sparkle",
+      "category": "dryck",
+      "price": 29,
+      "image": "/images/tropic-sparkle.png",
+      "popular": false
+    },
+    {
+      "id": "7",
+      "name": "Citrus Cooler",
+      "category": "dryck",
+      "price": 29,
+      "image": "/images/citrus-cooler.png",
+      "popular": false
+    },
+    {
+      "id": "8",
+      "name": "Green Leaf Energy",
+      "category": "dryck",
+      "price": 35,
+      "image": "/images/blue-energy.png",
+      "popular": false
+    },
+    {
+      "id": "9",
+      "name": "Frida Early Bird",
+      "category": "dryck",
+      "price": 35,
+      "image": "/images/early-bird.png",
+      "popular": false
+    },
+    {
+      "id": "10",
+      "name": "Grilled Salmon",
+      "category": "huvudrätt",
+      "price": 99,
+      "image": "/images/salmon.webp",
+      "popular": false
+    },
+    {
+      "id": "11",
+      "name": "Blackout Burger",
+      "category": "huvudrätt",
+      "price": 70,
+      "image": "/images/blackout-burger.png",
+      "popular": true
+    },
+    {
+      "id": "12",
+      "name": "Double Cheese Stack",
+      "category": "huvudrätt",
+      "price": 79,
+      "image": "/images/double-cheese.png",
+      "popular": true
+    },
+    {
+      "id": "13",
+      "name": "Truffle Melt Burger",
+      "category": "huvudrätt",
+      "price": 65,
+      "image": "/images/truffle-burger.png",
+      "popular": true
+    },
+    {
+      "id": "14",
+      "name": "Triple Patty burger",
+      "category": "huvudrätt",
+      "price": 89,
+      "image": "/images/triple-patty.png",
+      "popular": false
+    },
+    {
+      "id": "15",
+      "name": "Spaghetti Carbonara",
+      "category": "huvudrätt",
+      "price": 99,
+      "image": "/images/carbonara.webp",
+      "popular": false
+    },
+    {
+      "id": "16",
+      "name": "Crispy Fries",
+      "category": "huvudrätt",
+      "price": 25,
+      "image": "/images/fries.png",
+      "popular": false
+    },
+    {
+      "id": "17",
+      "name": "Sweet Fries",
+      "category": "huvudrätt",
+      "price": 30,
+      "image": "/images/sweet-fries.png",
+      "popular": false
+    },
+    {
+      "id": "18",
+      "name": "Oreo Choco Shake",
+      "category": "efterrätt",
+      "price": 39,
+      "image": "/images/oreo-shake.png",
+      "popular": true
+    },
+    {
+      "id": "19",
+      "name": "Salted Caramel Cheesecake",
+      "category": "efterrätt",
+      "price": 35,
+      "image": "/images/salted-caramel-cheesecake.png",
+      "popular": true
+    },
+    {
+      "id": "20",
+      "name": "Chokladfondant",
+      "category": "efterrätt",
+      "price": 39,
+      "image": "/images/choklad-fondant.jpg",
+      "popular": true
+    },
+    {
+      "id": "21",
+      "name": "Jordgubbspannacotta",
+      "category": "efterrätt",
+      "price": 39,
+      "image": "/images/jordgubbs-pannacotta.jpg",
+      "popular": false
+    },
+    {
+      "id": "22",
+      "name": "Vaniljglass med bär",
+      "category": "efterrätt",
+      "price": 39,
+      "image": "/images/vanilla-icecream.jpg",
+      "popular": false
+    }
+  ],
+  "orders": [
+    {
+      "id": "68ab",
+      "name": "Ricky Ilic",
+      "city": "Malmo",
+      "address": "Davidshallsgatan 23D",
+      "paymentMethod": "card",
+      "cartItems": [
+        {
+          "id": "12",
+          "name": "Double Cheese Stack",
+          "category": "huvudrätt",
+          "price": 79,
+          "image": "/images/double-cheese.png",
+          "popular": true,
+          "quantity": 1
+        },
+        {
+          "id": "13",
+          "name": "Truffle Melt Burger",
+          "category": "huvudrätt",
+          "price": 65,
+          "image": "/images/truffle-burger.png",
+          "popular": true,
+          "quantity": 1
+        },
+        {
+          "id": "14",
+          "name": "Triple Patty burger",
+          "category": "huvudrätt",
+          "price": 89,
+          "image": "/images/triple-patty.png",
+          "popular": false,
+          "quantity": 1
+        }
+      ],
+      "total": 233
+    }
   ]
 }

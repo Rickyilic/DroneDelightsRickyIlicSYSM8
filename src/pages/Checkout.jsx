@@ -18,7 +18,7 @@ function Checkout() {
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,10 +27,37 @@ function Checkout() {
       alert("Fyll i alla fält!");
       return;
     }
-
-    clearCart();
-    navigate("/confirmation");
+  
+ 
+    const orderData = { 
+    ...form,
+    cartItems,
+    total 
   };
+
+  // Skickar beställningen till servern
+  fetch("http://localhost:3001/orders", { 
+    method: "POST", // Använder POST-metoden för att skicka data
+    headers: {
+      "Content-Type": "application/json" // Anger att vi skickar JSON-data
+    },
+    body: JSON.stringify(orderData) // Skickar orderdata som JSON
+  }) 
+  .then(res => { 
+      if (!res.ok) throw new Error("Något gick fel vid beställning."); // Kollar om svaret är okej
+      return res.json(); // Omvandlar svaret till JSON
+    })
+  .then(data => {
+      console.log("Beställning lyckades:", data); // Loggar bekräftelse från servern
+      alert("Din beställning har skickats!"); // Visar en bekräftelse till användaren
+      clearCart(); // Tömmer varukorgen efter beställning
+      navigate("/confirmation"); // Navigerar till bekräftelsesidan
+    })
+  .catch(error => {
+      console.error("Fel vid beställning:", error);  // Loggar felmeddelandet
+      alert("Något gick fel. Försök igen senare.");   // Visar ett användarvänligt felmeddelande
+    });
+};
 
   return (
     <div className="checkout">
