@@ -15,7 +15,7 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   max-width: 1500px;
-  margin: 0 auto; /* centrerar horisontellt */
+  margin: 0 auto;
   margin-bottom: 2rem;
 }
 
