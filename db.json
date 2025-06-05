@@ -178,42 +178,5 @@
     }
   ],
   "orders": [
-    {
-      "id": "1cbb",
-      "name": "Ricky Ilic",
-      "city": "Malmo",
-      "address": "Davidshallsgatan 23D",
-      "paymentMethod": "swish",
-      "cartItems": [
-        {
-          "id": "21",
-          "name": "Jordgubbspannacotta",
-          "category": "efterrätt",
-          "price": 39,
-          "image": "/images/jordgubbs-pannacotta.jpg",
-          "popular": false,
-          "quantity": 1
-        },
-        {
-          "id": "20",
-          "name": "Chokladfondant",
-          "category": "efterrätt",
-          "price": 39,
-          "image": "/images/choklad-fondant.jpg",
-          "popular": true,
-          "quantity": 7
-        },
-        {
-          "id": "19",
-          "name": "Salted Caramel Cheesecake",
-          "category": "efterrätt",
-          "price": 35,
-          "image": "/images/salted-caramel-cheesecake.png",
-          "popular": true,
-          "quantity": 1
-        }
-      ],
-      "total": 347
-    }
   ]
 }

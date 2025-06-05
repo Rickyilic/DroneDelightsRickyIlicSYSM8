@@ -4,19 +4,20 @@ import { CartContext } from "../context/CartContext";
 import "./Home.css";
 
 function Home() {
-  const [popular, setPopular] = useState([]);
-  const { addToCart } = useContext(CartContext);
+  const [popular, setPopular] = useState([]); 
+  const { addToCart } = useContext(CartContext);    
 
-  useEffect(() => {
-    fetch("http://localhost:3001/products?popular=true")
-      .then((res) => res.json())
-      .then((data) => setPopular(data))
-      .catch((err) => console.error(err));
+  useEffect(() => { // Hämtar populära produkter från API:et
+    fetch("http://localhost:3001/products?popular=true")  // Anropar API:et för att hämta produkter som är populära
+      .then((res) => res.json()) // Omvandlar svaret till JSON
+      .then((data) => setPopular(data)) // Sparar de populära produkterna i state
+      .catch((err) => console.error(err)); // Hanterar eventuella fel vid hämtning
   }, []);
 
-  const popularMain = popular.filter(p => p.category === "huvudrätt");
-  const popularDrinks = popular.filter(p => p.category === "dryck");
-  const popularDesserts = popular.filter(p => p.category === "efterrätt");
+  const popularMain = popular.filter(p => p.category === "huvudrätt");  
+  const popularDrinks = popular.filter(p => p.category === "dryck");  
+  const popularDesserts = popular.filter(p => p.category === "efterrätt");  
+  // Filtrerar de populära produkterna baserat på deras kategori
 
   return (
     <div className="home">

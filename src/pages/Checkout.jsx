@@ -3,33 +3,34 @@ import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import "./Checkout.css";
 
-function Checkout() {
+function Checkout() { // Checkout-komponenten hanterar betalningsprocessen
 
-  const { cartItems, clearCart } = useContext(CartContext);
-  const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const navigate = useNavigate();
 
-  const [form, setForm] = useState({
+  const { cartItems, clearCart } = useContext(CartContext); // Använder CartContext för att få tillgång till varukorgens innehåll och tömningsfunktion
+  const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0); // Beräknar totalbeloppet för varukorgen genom att summera varje items pris multiplicerat med dess kvantitet
+  const navigate = useNavigate(); // useNavigate används för att navigera till andra sidor i applikationen
+
+  const [form, setForm] = useState({ // State för att hantera formulärets data
     name: "",
     city: "",
     address: "",
     paymentMethod: "swish",
   });
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) => { // Funktion som uppdaterar formulärets state när användaren skriver i fälten
+    setForm({ ...form, [e.target.name]: e.target.value });  // Uppdaterar det specifika fältet i formuläret baserat på användarens inmatning
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (e) => { // Funktion som hanterar formulärets inlämning
+    e.preventDefault(); // Förhindrar att sidan laddas om när formuläret skickas
 
-    if (!form.name || !form.city || !form.address) {
-      alert("Fyll i alla fält!");
+    if (!form.name || !form.city || !form.address) { // Kollar om alla obligatoriska fält är ifyllda
+      alert("Fyll i alla fält!"); 
       return;
     }
   
  
-    const orderData = { 
+    const orderData = {  // Skapar ett objekt med beställningsdata som ska skickas till servern
     ...form,
     cartItems,
     total 
